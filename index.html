@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="열두 마리 고양이와 함께하는 2027년 월간 캘린더">
+  <meta name="theme-color" content="#000000">
+  <title>2027 고양이 캘린더</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://commons.wikimedia.org">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-size='38'%3E%F0%9F%90%88%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="emoji-field" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#calendar" aria-label="2027 고양이 캘린더 처음으로">
+      <span class="brand-mark">🐈</span>
+      <span>CAT YEAR 2027</span>
+    </a>
+    <p class="edition">열두 달, 열두 마리</p>
+  </header>
+
+  <main id="calendar" class="calendar-shell">
+    <section class="calendar-card" aria-live="polite">
+      <div class="photo-panel">
+        <img id="cat-photo" src="" alt="" width="1200" height="900">
+        <div class="photo-label">
+          <span id="photo-index">CAT 01 / 12</span>
+          <span id="photo-caption">눈부신 한 해의 시작</span>
+        </div>
+      </div>
+
+      <div class="month-panel">
+        <div class="month-heading">
+          <div>
+            <p class="year">2027</p>
+            <h1><span id="month-number">01</span><span class="slash">/</span><span id="month-name">JANUARY</span></h1>
+          </div>
+          <div class="nav-controls" aria-label="월 이동">
+            <button id="prev-month" type="button" aria-label="이전 달">←</button>
+            <button id="next-month" type="button" aria-label="다음 달">→</button>
+          </div>
+        </div>
+
+        <div class="weekdays" aria-hidden="true">
+          <span>일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span>
+        </div>
+        <div id="days" class="days" role="grid" aria-label="2027년 1월"></div>
+
+        <nav id="month-selector" class="month-selector" aria-label="월 선택"></nav>
+        <p class="hint">← → 키로도 달을 넘길 수 있어요</p>
+      </div>
+    </section>
+
+    <section class="year-overview" aria-labelledby="overview-title">
+      <div class="overview-heading">
+        <p>ONE GLANCE</p>
+        <h2 id="overview-title">2027년 한눈에 보기</h2>
+      </div>
+      <div id="mini-calendars" class="mini-calendars"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>2027 CAT CALENDAR</p>
+    <details>
+      <summary>사진 출처</summary>
+      <ol id="photo-credits"></ol>
+    </details>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
